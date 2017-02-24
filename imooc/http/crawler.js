@@ -12,9 +12,7 @@ function filterChapters(html) {
     var courseData = [];
     chapters.each(function (item) {/*遍历全部chapters，拿出每一个单独的chapter*/
         var chapter = $(this);
-        var chapterTitleStr = chapter.find('strong').first().text();
-        var info = chapter.find('.chapter-content').text();
-        var chapterTitle = chapterTitleStr.split(info)[0].trim();
+        var chapterTitle = chapter.find('strong').first().text();
         var videos = chapter.find('.video').children('li');/*ul列表*/
         var chapterData = {
             chapterTitle: chapterTitle,
